@@ -1,7 +1,7 @@
 main {
     min-height: 95vh;
     width: 100%;
-    background-color: #E2E2B6;
+    background-color: var(--ljus-ton);
     padding: 0 10%;
     display: flex;
     justify-content: center;

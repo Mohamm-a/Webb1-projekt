@@ -1,3 +1,10 @@
+:root {
+    --mörk-ton: #021526;
+    --ljus-ton: #E2E2B6;
+    --accent-ton: #03346E;
+    --överlags-ton: #02152670;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +28,8 @@ header {
     top: 0;
     z-index: 3;
     width: 100%;
-    background-color: #021526;
-    border-bottom: 0.2rem solid #03346E;
+    background-color: var(--mörk-ton);
+    border-bottom: 0.2rem solid var(--accent-ton);
     min-height: 5vh;
 }
 
@@ -55,9 +62,39 @@ header {
     width: 25%;
 }
 
-.nav-logo a{  
-    color: #E2E2B6;
+/* Typewriter animation */
+
+.nav-logo {
+    color: var(--ljus-ton);
+    max-width: fit-content;
+    overflow: hidden; /* Ingen overflow */
+    white-space: nowrap; /* lägger i en rad */
+    border-right: 1px solid; /* Till för cursor animation */ 
+    animation: typing 3s steps(25) forwards, blink 1s step-end infinite; /* animering */
 }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+    
+  }
+
+.nav-logo a{  
+    color: var(--ljus-ton);
+}
+
+/* Navigerings länkar */
 
 .nav-links {
     list-style-type: none;
@@ -68,7 +105,7 @@ header {
 
 .nav-links-child {
     position: relative;
-    color: #E2E2B6;
+    color: var(--ljus-ton);
     text-decoration: none;
     display: block;
     padding: 0.5rem 0.5rem;
@@ -76,8 +113,8 @@ header {
 }
 
 .nav-links-child:hover {
-    background-color: #E2E2B6;
-    color: #021526;
+    background-color: var(--ljus-ton);
+    color: var(--mörk-ton);
 }
 
 @media only screen and (max-width: 820px) {
@@ -109,10 +146,10 @@ header {
 
 footer {
     height: 10vh;
-    background-color: #021526;
+    background-color: var(--mörk-ton);
     display: flex;
     align-items: center;
     justify-content: center; 
     text-align: center;
-    color: #E2E2B6;
+    color: var(--ljus-ton);
 }
