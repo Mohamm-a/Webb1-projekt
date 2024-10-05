@@ -1,0 +1,126 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    display: block;
+    width: 100%;
+    
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../media/airsoft4.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(47, 79, 79, 0.5);
+    background-blend-mode: multiply; 
+    /* Gjorde lite research, förstod att denna blendar 
+    en gradiant med den bilden som redan finns, för att 
+    få en overlay/skugga på 50% opacity, andra alternativet 
+    var ::after pseudo element, men det var för komplicerat */
+}
+
+#front-page-title {
+    background-color: rgba(47, 79, 79, 0.7);
+    padding: 5rem;
+    border-radius: 10px;
+    Color: black;
+}
+
+#front-heading {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+}
+
+#slogan {
+    font-size: 3rem;
+    color: white;
+}
+
+main {
+    margin: auto;
+    background-color: darkslategrey;
+    /*width: 100%;
+    height: 150vh;*/
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+p, h2, h3, ul {
+    padding: 0.5rem;
+}
+
+h2 {
+    padding-top: 0;
+}
+
+h3 {
+    padding-top: 0.5rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+hr {
+    color: darkolivegreen;
+    border: solid 0.1rem darkolivegreen;
+    margin: 0.8rem 0;
+}
+
+section {
+    padding: 2rem;
+    width: 70%;
+    background-color: darkkhaki;
+    border: 0;
+    color: white;
+    border-radius: 10px; /* rundar av kanterna */
+    margin: auto;
+}
+
+
+footer {
+    margin: auto;
+    width: 100%;
+    background-color: darkkhaki;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid;
+    
+}
+
+#img {
+    width: 100%;
+    height: 20rem;
+    object-fit:cover;
+    object-position: 50% 40%;
+    border-radius: 10px;
+}
+
+/* {
+    border: 0.5px solid;
+    border-color: #000000;
+    
+}*/

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    font-weight: bold;
+}
+
+/* Header & Navigation */
+
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #021526;
+    border-bottom: 0.2rem solid #03346E;
+    min-height: 5vh;
+}
+
+.nav-parent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.nav-child.first {
+    /* background-color: rgb(255, 0, 0); */
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-child.second {
+    /* background-color: rgb(0, 255, 0); */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-child.third {
+    /* background-color: rgb(0, 0, 255); */
+    width: 25%;
+}
+
+.nav-logo a{  
+    color: #E2E2B6;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.nav-links-child {
+    position: relative;
+    color: #E2E2B6;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0.5rem;
+    transition: 150ms ease-in-out;
+}
+
+.nav-links-child:hover {
+    background-color: #E2E2B6;
+    color: #021526;
+}
+
+@media only screen and (max-width: 820px) {
+
+    header {
+        max-height: calc(10vh - 0.2rem);
+    }
+
+    .nav-child{
+        height: 5vh;
+    }
+
+    .nav-child.first {
+        width: 100%;
+        
+    }
+
+    .nav-child.second {
+        width: 100%;
+        order: 3;
+    }
+
+    .nav-child.third {
+        display: none;
+    }
+}
+
+/* Footer */
+
+footer {
+    height: 10vh;
+    background-color: #021526;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    color: #E2E2B6;
+}
