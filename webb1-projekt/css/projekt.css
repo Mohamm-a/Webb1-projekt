@@ -1,7 +1,7 @@
 main {
     min-height: 95vh;
     width: 100%;
-    background-color: var(--ljus-ton);
+    background-color: var(--light-tone);
     padding: 0 10%;
     display: flex;
     justify-content: center;
@@ -18,16 +18,16 @@ main {
 }
 
 .cards {
-    background-color: var(--mörk-ton);
+    background-color: var(--dark-tone);
     position: relative;
     width: 100%;
     height: 100%;
-    border: 0.3rem solid var(--accent-ton);
+    border: 0.3rem solid var(--accent-tone);
 }
 
 .cards-button {
-    background-color: var(--mörk-ton);
-    border: 0.1rem solid var(--ljus-ton);
+    background-color: var(--dark-tone);
+    border: 0.1rem solid var(--light-tone);
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     font-weight: bold;
@@ -42,15 +42,15 @@ main {
 }
 
 .cards-button a {
-    color: var(--ljus-ton);
+    color: var(--light-tone);
     text-decoration: none;
 }
 
 .cards-button:hover {
-    background-color: var(--ljus-ton);
+    background-color: var(--light-tone);
 
     a {
-        color: var(--mörk-ton);
+        color: var(--dark-tone);
     }
 }
 
@@ -71,7 +71,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--överlags-ton); 
+    background-color: var(--overlay-tone); 
     z-index: 1;
 }
 
