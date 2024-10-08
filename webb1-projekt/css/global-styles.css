@@ -16,17 +16,19 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     font-weight: bold;
+    position: relative;
+    background-color: var(--dark-tone);
 }
 
 /* Header & Navigation */
 
 header {
     position: sticky;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0;
-    z-index: 3;
     width: 100%;
     background-color: var(--dark-tone);
     border-bottom: 0.3rem solid var(--accent-tone);
@@ -74,22 +76,22 @@ header {
     animation: typing 3s steps(25) forwards, blink 1s step-end infinite; /* animering */
 }
  
-  @keyframes typing {
+@keyframes typing {
     from {
-      width: 0;
+        width: 0;
     }
-  
+
     to {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      border-color: transparent;
+        border-color: transparent;
     }
-    
-  }
+
+}
 
 .nav-logo a{  
     color: var(--light-tone);
@@ -146,11 +148,177 @@ header {
 /* Footer */
 
 footer {
-    height: 10vh;
+    position: relative; /* Ensure footer creates a stacking context */
+    z-index: 0; /* This is the background layer */
     background-color: var(--dark-tone);
+    padding: 1rem 2rem;
+    border-top: 0.3rem solid var(--accent-tone);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "heading"
+    "nav"
+    "socials"
+    "hr"
+    "rights"
+    ;
+    gap: 0.5rem;
+}
+
+.heading-container {
+    grid-area: heading;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    text-align: center;
+    color: var(--light-tone);
+    padding-left: 0.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.heading-container h1 {
+    color: var(--light-tone);
+    max-width: fit-content;
+    padding-right: 0.1rem;
+    overflow: hidden; /* Ingen overflow */
+    white-space: nowrap; /* lägger i en rad */
+    border-right: 0.1rem solid; /* Till för cursor animation */ 
+    animation: blink 1s step-end infinite; /* animering */
+    text-decoration: underline;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+.nav-container {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-container li {
+    position: relative;
+    color: var(--light-tone);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0.4rem;
+    transition: 150ms ease-in-out;
+}
+
+.nav-container li a {
+    text-decoration: none;
     color: var(--light-tone);
 }
+
+.nav-container li:hover {
+    background-color: var(--light-tone);
+    color: var(--dark-tone);
+
+    a {
+        color: var(--dark-tone);
+    }
+}
+
+.socials-container {
+    position: relative; /* To allow stacking context */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: start;
+    grid-area: socials;
+    margin-bottom: 0.5rem;
+}
+
+.socials-container a {
+    position: relative; 
+    padding: 0.4rem;
+    
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--dark-tone);
+    transition: 150ms ease-in-out;
+}
+
+.socials-container a svg {
+    z-index: 4; 
+    fill: var(--light-tone);
+    width: 1rem;
+    padding: 0;
+}
+
+.socials-container a:hover {
+    background-color: var(--light-tone);
+    
+
+    svg {
+        fill: var(--dark-tone);
+    }
+
+}
+
+.content-container {
+    background-color: var(--light-tone);
+    grid-area: content;
+    margin-bottom: 0.5rem;
+}
+
+footer hr {
+    grid-area: hr;
+    border: 0.05rem solid var(--light-tone);
+    width: 100%;
+}
+
+.rights-container {
+    grid-area: rights;
+    color: var(--light-tone);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 620px) {
+
+    .heading-container {
+        display: none;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    footer {
+        padding: 0 2rem 1rem 2rem;
+        justify-items: center;
+    }
+
+    .socials-container {
+        justify-content: space-around;
+        width: 80%;
+    }
+}
+
+/*
+@property --fill {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+  
+.socials-container a:hover {
+    --fill: 100%;
+}
+  
+.socials-container a::after {
+    position: absolute; 
+    z-index: -1; 
+    content: "";
+    inset: -0.2rem;
+    border-radius: inherit;
+    background: conic-gradient(var(--light-tone) var(--fill), transparent var(--fill));
+    transition: --fill 0.3s ease-in-out;
+} 
+*/
