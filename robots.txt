@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://webb1-projekt.se/sitemap.xml
