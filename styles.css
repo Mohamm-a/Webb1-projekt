@@ -10,6 +10,12 @@
     padding: 0;
     box-sizing: border-box;
     /* border: 1px solid black; */
+    
+}
+
+html {
+    background-color: var(--dark-tone);
+
 }
 
 body {
@@ -17,7 +23,6 @@ body {
     font-size: small;
     font-weight: bold;
     position: relative;
-    background-color: var(--dark-tone);
 }
 
 /* Header & Navigation */
