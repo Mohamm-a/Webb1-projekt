@@ -279,6 +279,27 @@ footer hr {
     color: var(--light-tone);
     text-align: center;
     margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+
+}
+
+.rights-container ul {
+    flex-shrink: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+    color: var(--light-tone);
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - 2rem));
+    }
 }
 
 @media only screen and (max-width: 620px) {
