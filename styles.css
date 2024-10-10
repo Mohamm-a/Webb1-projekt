@@ -5,6 +5,18 @@
     --overlay-tone: #02152670;
 }
 
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-tone);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-tone);
+}
+
 * {
     margin: 0;
     padding: 0;
