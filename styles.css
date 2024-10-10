@@ -282,7 +282,7 @@ footer hr {
     display: flex;
     gap: 1rem;
     overflow: hidden;
-
+    direction: rtl;
 }
 
 .rights-container ul {
@@ -294,11 +294,12 @@ footer hr {
     gap: 2rem;
     animation: scroll 20s linear infinite;
     color: var(--light-tone);
+    
 }
 
 @keyframes scroll {
     to {
-        transform: translateX(calc(-100% - 2rem));
+        transform: translateX(100%);
     }
 }
 

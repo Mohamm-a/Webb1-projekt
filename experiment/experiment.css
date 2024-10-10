@@ -184,12 +184,12 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll-ex 20s linear infinite;
     color: var(--light-tone);
     font-size: xx-large;
 }
 
-@keyframes scroll {
+@keyframes scroll-ex {
     to {
         transform: translateX(calc(-100% - 2rem));
     }
