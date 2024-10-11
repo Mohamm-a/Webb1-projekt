@@ -22,27 +22,25 @@ header {
     background-color: #0D92F4;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: flex-start;
     direction: rtl;
 }
 
-header ul {
-    flex-shrink: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
+header h1 {
+    white-space: nowrap;
+    padding: 0 2rem;
     animation: scroll 5s linear infinite;
     font-size: xx-large;
     margin: 0.5rem 0;
-}
-
-header ul li {
     background-color: greenyellow;
 }
 
 @keyframes scroll {
-    to {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
         transform: translateX(100%);
     }
 }
@@ -145,32 +143,33 @@ main {
 }
 
 footer {
-    min-height: 5vh;
-    background-color: #0D92F4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer {
+    position: sticky;
+    top: 1rem;
     min-height: 5vh;
     margin-bottom: 1rem;
     background-color: #0D92F4;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: flex-start;
     direction: rtl;
 }
 
-footer ul {
-    flex-shrink: 0;
-    list-style: none;
+footer p {
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    animation: scroll 3s linear infinite;
+    padding: 0 2rem;
+    animation: scroll 5s linear infinite;
+    margin: 0.5rem 0;
+    background-color: greenyellow;
 }
 
-footer ul li {
-    background-color: greenyellow;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }

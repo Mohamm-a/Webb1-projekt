@@ -289,29 +289,29 @@ footer hr {
 .rights-container {
     grid-area: rights;
     width: 100%;
-    color: var(--light-tone);
-    text-align: center;
+    justify-content: flex-start;
     margin-top: 0.5rem;
     display: flex;
-    gap: 1rem;
     overflow: hidden;
     direction: rtl;
 }
 
-.rights-container ul {
-    flex-shrink: 0;
-    list-style: none;
+.rights-container p {
+    width: fit-content;
+    padding: 0 1rem;
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll 10s linear infinite;
     color: var(--light-tone);
-    
 }
 
 @keyframes scroll {
-    to {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
         transform: translateX(100%);
     }
 }
