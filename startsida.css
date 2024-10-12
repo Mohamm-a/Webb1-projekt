@@ -1,3 +1,78 @@
+/*
+body {
+    overflow: hidden;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-tone);
+    transition: transform 1s ease-in-out; 
+    z-index: 9999;
+  }
+  
+  .loader--hidden {
+    transform: translateY(100vh); 
+  }
+  
+  .loader::after {
+    content: "Designad av Mohammed T24a, Täby Enskilda";
+    margin-top: 1rem;
+    font-size: medium;
+    color: var(--light-tone);
+  }
+
+  .loader::before {
+    content: "Webb1-projekt";
+    color: var(--light-tone);
+    font-size: xx-large;
+  }
+
+  .loader::before {
+    padding-right: 0.1rem;
+    max-width: fit-content;
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 0.1rem solid; 
+    animation: typing 5s steps(25) forwards, blink 1s step-end 5; 
+}
+ 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 720px) {
+    .loader::after {
+        font-size: smaller;
+    }
+    
+    .loader::before {
+        font-size: medium;
+    }
+}
+
+*/
+  
+
 main {
     min-height: 95vh;
     width: 100%;

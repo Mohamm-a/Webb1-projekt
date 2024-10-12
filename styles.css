@@ -25,6 +25,10 @@
     
 }
 
+html {
+    background-color: var(--dark-tone);
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
@@ -304,6 +308,7 @@ footer hr {
     align-items: center;
     animation: scroll 10s linear infinite;
     color: var(--light-tone);
+    
 }
 
 @keyframes scroll {
@@ -335,7 +340,15 @@ footer hr {
         justify-content: space-around;
         width: 80%;
     }
+
+    .rights-container p {
+        font-size: xx-small;
+        padding: 0 0.5rem;
+    }
 }
+
+
+
 
 /*
 @property --fill {
