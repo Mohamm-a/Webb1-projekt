@@ -1,0 +1,7 @@
+/* TEAM */
+Developer: Mohammed Hadi Alizade
+Contact: mohammed.hadi.alizade@student.tabyenskilda.se
+
+/* SITE */
+Last update: 2024-10-13
+Software: HTML, CSS, "JavaScript"
